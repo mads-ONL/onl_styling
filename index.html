@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="onl_styling.css">
+    <title>onl_styling Showcase</title>
+</head>
+<body>
+    <!-- Navbar with Icons -->
+    <nav class="navbar navbar-icons">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#" class="navbar-brand">onl_styling (Icons)</a>
+            <button class="navbar-toggler" onclick="toggleNavbar('navbar-nav-icons')">☰</button>
+            <div class="navbar-nav" id="navbar-nav-icons">
+                <a href="#" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+                <a href="#" class="nav-link"><i class="fas fa-cogs"></i> Features</a>
+                <a href="#" class="nav-link"><i class="fas fa-book"></i> Docs</a>
+                <a href="#" class="nav-link text-muted"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar without Icons -->
+    <nav class="navbar mt-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#" class="navbar-brand">onl_styling (No Icons)</a>
+            <button class="navbar-toggler" onclick="toggleNavbar('navbar-nav-no-icons')">☰</button>
+            <div class="navbar-nav" id="navbar-nav-no-icons">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">Features</a>
+                <a href="#" class="nav-link">Docs</a>
+                <a href="#" class="nav-link text-muted">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="card fade-in mb-3">
+            <h1>onl_styling Showcase</h1>
+            <p class="text-muted">A comprehensive dark mode UI framework</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="card mb-3">
+            <h2>Search Bar</h2>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <p class="text-muted mt-2">Simple search input</p>
+        </div>
+
+        <!-- Typography -->
+        <div class="card mb-3">
+            <h2>Typography</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <p>Regular text with <span class="text-accent">accent</span> and <span class="text-muted">muted</span> variations.</p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="card mb-3">
+            <h2>Buttons</h2>
+            <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-primary">Primary</button>
+                <button class="btn btn-secondary">Secondary</button>
+                <button class="btn btn-success">Success</button>
+                <button class="btn btn-danger">Danger</button>
+                <button class="btn btn-warning">Warning</button>
+                <button class="btn btn-outline">Outline</button>
+                <button class="btn btn-primary btn-sm">Small</button>
+                <button class="btn btn-primary btn-lg">Large</button>
+                <button class="btn btn-primary" disabled>Disabled</button>
+            </div>
+            <p class="text-muted mt-2">Button descriptions can go here</p>
+        </div>
+
+        <!-- Forms -->
+        <div class="card mb-3">
+            <h2>Forms</h2>
+            <div class="form-group">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" rows="3" placeholder="Your message"></textarea>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Disabled Input</label>
+                <input type="text" class="form-control" placeholder="Disabled" disabled>
+            </div>
+            <p class="text-muted">Form fields are fully styled</p>
+        </div>
+
+        <!-- Password Toggle -->
+        <div class="card mb-3">
+            <h2>Password Toggle</h2>
+            <div class="password-toggle">
+                <input type="password" class="form-control" placeholder="Password" id="password">
+                <button class="toggle-btn" onclick="togglePassword()">👁️</button>
+            </div>
+            <p class="text-muted mt-2">Toggle password visibility</p>
+        </div>
+
+        <!-- Dropdowns -->
+        <div class="card mb-3">
+            <h2>Dropdowns</h2>
+            <div class="dropdown">
+                <select class="dropdown-select">
+                    <option value="">Select an option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+            </div>
+            <p class="text-muted mt-2">Custom dropdown styling</p>
+        </div>
+
+        <!-- Switches -->
+        <div class="card mb-3">
+            <h2>Switches</h2>
+            <div class="form-group">
+                <label class="form-label" for="switch1">Toggle Switch</label>
+                <label class="switch">
+                    <input type="checkbox" id="switch1">
+                    <span class="switch-slider"></span>
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="switch2">Disabled Switch</label>
+                <label class="switch">
+                    <input type="checkbox" id="switch2" disabled>
+                    <span class="switch-slider disabled"></span>
+                </label>
+            </div>
+            <p class="text-muted">Toggle switches with states</p>
+        </div>
+
+        <!-- Checkboxes and Radios -->
+        <div class="card mb-3">
+            <h2>Checkboxes & Radios</h2>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="check1">
+                <label class="form-check-label" for="check1">Checkbox</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="radio" id="radio1">
+                <label class="form-check-label" for="radio1">Radio 1</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="radio" id="radio2">
+                <label class="form-check-label" for="radio2">Radio 2</label>
+            </div>
+            <p class="text-muted">Custom checkbox and radio styling</p>
+        </div>
+
+        <!-- Tables -->
+        <div class="card mb-3">
+            <h2>Tables</h2>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th class="sortable">ID</th>
+                        <th class="sortable">Name</th>
+                        <th class="sortable">Role</th>
+                        <th class="sortable">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>Developer</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>Designer</td>
+                        <td>Inactive</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Bob Johnson</td>
+                        <td>Manager</td>
+                        <td>Active</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="text-muted">Sortable, hoverable table design (add JS for full sorting)</p>
+        </div>
+
+        <!-- Pagination -->
+        <div class="card mb-3">
+            <h2>Pagination</h2>
+            <div class="pagination">
+                <div class="page-item disabled"><a href="#" class="page-link">Prev</a></div>
+                <div class="page-item active"><a href="#" class="page-link">1</a></div>
+                <div class="page-item"><a href="#" class="page-link">2</a></div>
+                <div class="page-item"><a href="#" class="page-link">3</a></div>
+                <div class="page-item"><a href="#" class="page-link">Next</a></div>
+            </div>
+            <p class="text-muted">Responsive pagination controls</p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="card mb-3">
+            <h2>Tabs (Default)</h2>
+            <div class="tabs">
+                <div class="tabs-nav">
+                    <a href="#" class="tab-link active" onclick="switchTab(event, 'tab1')">Tab 1</a>
+                    <a href="#" class="tab-link" onclick="switchTab(event, 'tab2')">Tab 2</a>
+                    <a href="#" class="tab-link" onclick="switchTab(event, 'tab3')">Tab 3</a>
+                </div>
+                <div id="tab1" class="tab-content active">
+                    <h3>Tab 1 Content</h3>
+                    <p>This is the content for the first tab.</p>
+                </div>
+                <div id="tab2" class="tab-content">
+                    <h3>Tab 2 Content</h3>
+                    <p>This is the content for the second tab.</p>
+                </div>
+                <div id="tab3" class="tab-content">
+                    <h3>Tab 3 Content</h3>
+                    <p>This is the content for the third tab.</p>
+                </div>
+            </div>
+            <p class="text-muted">Default horizontal tabs</p>
+        </div>
+
+        <div class="card mb-3">
+            <h2>Tabs (Vertical)</h2>
+            <div class="tabs tabs-vertical">
+                <div class="tabs-nav">
+                    <a href="#" class="tab-link active" onclick="switchTab(event, 'vtab1')">Tab 1</a>
+                    <a href="#" class="tab-link" onclick="switchTab(event, 'vtab2')">Tab 2</a>
+                    <a href="#" class="tab-link" onclick="switchTab(event, 'vtab3')">Tab 3</a>
+                </div>
+                <div id="vtab1" class="tab-content active">
+                    <h3>Vertical Tab 1</h3>
+                    <p>Content for vertical tab 1.</p>
+                </div>
+                <div id="vtab2" class="tab-content">
+                    <h3>Vertical Tab 2</h3>
+                    <p>Content for vertical tab 2.</p>
+                </div>
+                <div id="vtab3" class="tab-content">
+                    <h3>Vertical Tab 3</h3>
+                    <p>Content for vertical tab 3.</p>
+                </div>
+            </div>
+            <p class="text-muted">Vertical tab variation</p>
+        </div>
+
+        <div class="card mb-3">
+            <h2>Tabs (Pills)</h2>
+            <div class="tabs tabs-pills">
+                <div class="tabs-nav">
+                    <a href="#" class="tab-link active" onclick="switchTab(event, 'ptab1')">Tab 1</a>
+                    <a href="#" class="tab-link" onclick="switchTab(event, 'ptab2')">Tab 2</a>
+                    <a href="#" class="tab-link" onclick="switchTab(event, 'ptab3')">Tab 3</a>
+                </div>
+                <div id="ptab1" class="tab-content active">
+                    <h3>Pill Tab 1</h3>
+                    <p>Content for pill tab 1.</p>
+                </div>
+                <div id="ptab2" class="tab-content">
+                    <h3>Pill Tab 2</h3>
+                    <p>Content for pill tab 2.</p>
+                </div>
+                <div id="ptab3" class="tab-content">
+                    <h3>Pill Tab 3</h3>
+                    <p>Content for pill tab 3.</p>
+                </div>
+            </div>
+            <p class="text-muted">Pill-style tab variation</p>
+        </div>
+
+        <!-- Modals -->
+        <div class="card mb-3">
+            <h2>Modals</h2>
+            <button class="btn btn-primary" onclick="openModal('modal1')">Open Default Modal</button>
+            <button class="btn btn-primary" onclick="openModal('modal2')">Open Small Modal</button>
+            <button class="btn btn-primary" onclick="openModal('modal3')">Open Large Modal</button>
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Default Modal</h3>
+                        <button class="modal-close" onclick="closeModal('modal1')">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>This is a default modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" onclick="closeModal('modal1')">Close</button>
+                        <button class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+            <div id="modal2" class="modal modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Small Modal</h3>
+                        <button class="modal-close" onclick="closeModal('modal2')">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>This is a small modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" onclick="closeModal('modal2')">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div id="modal3" class="modal modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Large Modal</h3>
+                        <button class="modal-close" onclick="closeModal('modal3')">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>This is a large modal with more content.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" onclick="closeModal('modal3')">Close</button>
+                        <button class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+            <p class="text-muted mt-2">Different modal sizes</p>
+        </div>
+
+        <!-- Progress Bars -->
+        <div class="card mb-3">
+            <h2>Progress Bars</h2>
+            <div class="progress mb-2">
+                <div class="progress-bar" style="width: 25%;"></div>
+            </div>
+            <div class="progress mb-2">
+                <div class="progress-bar" style="width: 50%;"></div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" style="width: 75%;"></div>
+            </div>
+            <p class="text-muted mt-2">Simple progress bars</p>
+        </div>
+
+        <!-- File Upload -->
+        <div class="card mb-3">
+            <h2>File Upload</h2>
+            <div class="file-upload">
+                <input type="file" id="fileInput">
+                <label for="fileInput" class="file-upload-label">Choose File</label>
+            </div>
+            <p class="text-muted mt-2">Custom file upload button</p>
+        </div>
+
+        <!-- Copy to Clipboard -->
+        <div class="card mb-3">
+            <h2>Copy to Clipboard</h2>
+            <div class="copy-text">
+                <input type="text" class="form-control" value="Text to copy" readonly>
+                <button class="copy-btn" onclick="copyToClipboard()">📋</button>
+            </div>
+            <p class="text-muted mt-2">Click to copy text</p>
+        </div>
+
+        <!-- Next/Prev Buttons -->
+        <div class="card mb-3">
+            <h2>Next/Prev Buttons</h2>
+            <div class="nav-buttons">
+                <button class="nav-btn" disabled>Prev</button>
+                <button class="nav-btn">Next</button>
+            </div>
+            <p class="text-muted mt-2">Navigation buttons</p>
+        </div>
+
+        <!-- Image Styling -->
+        <div class="card mb-3">
+            <h2>Image Styling</h2>
+            <img src="https://picsum.photos/150/150?random=1" class="img-bordered mb-2" alt="Bordered Image">
+            <img src="https://picsum.photos/150/150?random=2" class="thumbnail mb-2" alt="Thumbnail">
+            <div class="image-grid">
+                <img src="https://picsum.photos/150/150?random=3" class="thumbnail" alt="Grid Image 1">
+                <img src="https://picsum.photos/150/150?random=4" class="thumbnail" alt="Grid Image 2">
+                <img src="https://picsum.photos/150/150?random=5" class="thumbnail" alt="Grid Image 3">
+            </div>
+            <p class="text-muted mt-2">Bordered images, thumbnails, and grid with placeholder images</p>
+        </div>
+
+        <!-- Markdown Editor -->
+        <div class="card mb-3">
+            <h2>Markdown Editor</h2>
+            <div class="markdown-editor">
+                <div class="markdown-editor-toolbar">
+                    <button class="btn btn-sm" title="Bold"><strong>B</strong></button>
+                    <button class="btn btn-sm" title="Italic"><em>I</em></button>
+                    <button class="btn btn-sm" title="Heading">#</button>
+                    <button class="btn btn-sm" title="Link">🔗</button>
+                    <button class="btn btn-sm" title="Code">`{}`</button>
+                </div>
+                <div class="markdown-editor-content">
+                    <div class="markdown-editor-input">
+                        <textarea placeholder="Write your markdown here..."></textarea>
+                    </div>
+                    <div class="markdown-editor-preview">
+                        <p>Preview will appear here</p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-muted">Simple markdown editor with toolbar</p>
+        </div>
+
+        <!-- Utilities -->
+        <div class="card mb-3">
+            <h2>Utilities</h2>
+            <div class="mb-3">
+                <h3>Shadows</h3>
+                <div class="shadow-lg rounded-lg p-3 mb-2">Large shadow</div>
+                <div class="shadow rounded p-3 mb-2">Regular shadow</div>
+                <div class="shadow-sm rounded p-3 mb-2">Small shadow</div>
+                <div class="shadow-none rounded p-3">No shadow</div>
+            </div>
+            <div class="mb-3">
+                <h3>Rounding</h3>
+                <div class="rounded-lg p-3 mb-2 bg-surface">Large rounded</div>
+                <div class="rounded p-3 mb-2 bg-surface">Regular rounded</div>
+                <div class="rounded-sm p-3 mb-2 bg-surface">Small rounded</div>
+                <div class="rounded-full p-3 w-25 d-inline-block bg-surface">Full rounded</div>
+            </div>
+            <div class="mb-3">
+                <h3>Spacing</h3>
+                <div class="p-3 bg-surface mb-2">Padding: <span class="text-muted">p-3</span></div>
+                <div class="m-3 p-3 bg-surface mb-2">Margin: <span class="text-muted">m-3</span></div>
+                <div class="px-5 py-2 bg-surface">Custom padding: <span class="text-muted">px-5 py-2</span></div>
+            </div>
+            <div class="mb-3">
+                <h3>Sizing</h3>
+                <div class="w-25 p-3 bg-surface mb-2">25% width</div>
+                <div class="w-50 p-3 bg-surface mb-2">50% width</div>
+                <div class="w-75 p-3 bg-surface mb-2">75% width</div>
+                <div class="w-100 p-3 bg-surface">100% width</div>
+            </div>
+            <div class="mb-3">
+                <h3>Display</h3>
+                <div class="d-inline-block p-3 bg-surface mr-2">Inline-block</div>
+                <div class="d-inline-block p-3 bg-surface">Inline-block</div>
+                <div class="d-block p-3 bg-surface mt-2">Block</div>
+                <div class="d-flex justify-content-between p-3 bg-surface mt-2">
+                    <span>Flex item 1</span>
+                    <span>Flex item 2</span>
+                </div>
+            </div>
+            <div class="mb-3">
+                <h3>Positioning</h3>
+                <div class="position-relative p-3 bg-surface">
+                    Relative
+                    <div class="position-absolute top-0 right-0 p-1 bg-accent">Absolute</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <h3>Text Alignment</h3>
+                <div class="text-left p-3 bg-surface mb-2">Left aligned</div>
+                <div class="text-center p-3 bg-surface mb-2">Center aligned</div>
+                <div class="text-right p-3 bg-surface">Right aligned</div>
+            </div>
+            <p class="text-muted">Expanded utility classes for styling</p>
+        </div>
+    </div>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" onclick="scrollToTop()">↑</button>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+        <p>© 2025 onl_styling. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleNavbar(navId) {
+            const nav = document.getElementById(navId);
+            nav.classList.toggle('active');
+        }
+
+        function switchTab(event, tabId) {
+            event.preventDefault();
+            const tabLinks = document.querySelectorAll('.tab-link');
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabLinks.forEach(link => link.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+
+        function togglePassword() {
+            const input = document.getElementById('password');
+            const btn = document.querySelector('.toggle-btn');
+            if (input.type === 'password') {
+                input.type = 'text';
+                btn.textContent = '👁️‍🗨️';
+            } else {
+                input.type = 'password';
+                btn.textContent = '👁️';
+            }
+        }
+
+        function copyToClipboard() {
+            const input = document.querySelector('.copy-text input');
+            input.select();
+            document.execCommand('copy');
+            alert('Text copied to clipboard!');
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    <style>
+        /* Temporary helper class for visibility in demo */
+        .bg-surface { background-color: var(--surface); color: var(--text); }
+    </style>
+</body>
+</html>
